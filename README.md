@@ -1,8 +1,23 @@
-# React + Vite
+the Prerequisites for this project are:
+1. React.
+2. Validator.
+3. useState.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+the structure for this project:
+1. 
+2. 
+3. 
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Validator 
+- the validator is a module and is popular for validation, and that process is necessary to check whether the data is correct or not.
+
+- Validator Module Features:
+    1. its easy to use, popular, and widely used.
+    2. has simple functions for validation such as : isEmail(), isEmpty(), etc...
+
+- how to install it :
+    '''bash
+        npm install validator
+    '''
+    
