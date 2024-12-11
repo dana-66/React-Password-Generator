@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import validator from "validator";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [errorMessage, setErrorMessage] = useState("");
+  const validate = (value) => {
+    if (
+      validator.isStrongPassword(value, {
+        minLength: 8,
+        maxLength: 12,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1,
+        minSymbols: 1,
+
+      })
+    ) {
+      setErrorMessage("Is Strong Password");
+    } else {
+      setErrorMessage("Is Not Strong Password");
+    }
+  };
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <pre>
+          <h2>Checking Password Strength </h2>
+          <span style={{ fontSize: "20px" }}>Enter Password: </span>
+          <input
+            type="password"
+            style={{
+              marginBottom: "10px",
+              padding: "5px 15px",
+              fontSize: "20px",
+            }}
+            onChange={(e) => validate(e.target.value)}
+            maxLength={14}
+          />{" "}
+          <br />
+          {errorMessage === "" ? null : (
+            <span
+              style={{
+                fontWeight: "bold",
+                fontSize: "15px",
+                color: "red",
+              }}
+            >
+              {errorMessage}
+            </span>
+          )}
+        </pre>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
