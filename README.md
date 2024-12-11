@@ -35,7 +35,7 @@ the structure for this project:
 
 - there are other modules available for validation like hapi-joi, express-validator.
 
-
+---
 ## useState:
 useState Hook is used to access state in the React Functional components. and its a special function that<strong> allows you to manage state within functional components </strong> without the need for class-based components.
 
@@ -63,7 +63,7 @@ useState Hook is used to access state in the React Functional components. and it
     <li>The stack pointer points to the latest cell after each render.</li>
     <li>Deliberate user refresh triggers stack dump and fresh allocation.</li>
     <li>The memory cell preserves state between renders, ensuring persistence. </li>
-    
+
 
 
 
