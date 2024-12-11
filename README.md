@@ -3,11 +3,6 @@ the Prerequisites for this project are:
 2. Validator.
 3. useState.
 
-the structure for this project:
-1. 
-2. 
-3. 
-
 
 ## Validator 
 - the validator is a module and is popular for validation, and that process is necessary to check whether the data is correct or not.
