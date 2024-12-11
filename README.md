@@ -17,7 +17,7 @@ the structure for this project:
     2. has simple functions for validation such as : isEmail(), isEmpty(), etc...
 
 - how to install it :
-    '''bash
+    '''
         npm install validator
     '''
-    
+
